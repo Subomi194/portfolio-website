@@ -3,11 +3,18 @@ import nodemailer from "nodemailer";
 export async function POST(request) {
 
     try{
-        const {name, email, message} = await request.json();
+        const {fullname, email, message} = await request.json();
 
-        if(!name || !email || !message) {
+        if(!fullname || !email || !message) {
             return new Response(
                 JSON.stringify({ error: "Missing required fields" }),
+                { status: 400 }
+            );
+        }
+
+        if(!email.includes("@")) {
+            return new Response(
+                JSON.stringify({ error: "Invalid email address" }),
                 { status: 400 }
             );
         }
@@ -23,11 +30,11 @@ export async function POST(request) {
         const mailOption = {
             from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
-            subject: `New message from ${name}`,
+            subject: `New message from ${fullname}`,
             text: "This is the plaintext version of the email.",
             replyTo: email,
             html: `
-                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Name:</strong> ${fullname}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Message:</strong></p>
                 <p> ${message}</p>

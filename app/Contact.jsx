@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import FloatingInput from '@/componenets/FloatingInput';
 import FloatingTextarea from '@/componenets/FloatingTextarea';
 
@@ -15,9 +15,9 @@ const Contact = () => {
     const form = e.target;
 
     const data = {
-      name: form.name.value,
-      email: form.name.value,
-      message: form.name.value
+      fullname: form.fullname.value,
+      email: form.email.value,
+      message: form.message.value
     };
 
     const response = await fetch("/api/contact", {
@@ -30,6 +30,8 @@ const Contact = () => {
       body: JSON.stringify(data),
     });
 
+    
+
     if (response.ok) {
       setMessage("success");
       form.reset()
@@ -39,6 +41,16 @@ const Contact = () => {
     }
   }
   
+  useEffect(() => {
+      if (message === "success" || message === "error") {
+        const timer = setTimeout(() => {
+          setMessage("");
+        }, 3000);
+
+        return () => clearTimeout(timer);
+
+      }
+    }, [message])
   return (
     <section id='contact' className='py-24'>
         <div className='flex-1 max-w-6xl mx-auto px-6 space-y-4'>
@@ -47,7 +59,7 @@ const Contact = () => {
             <form action="" onSubmit={handleSubmit}  className='flex flex-col gap-5'>
 
               <FloatingInput
-                id="name" name="name" label="Name" required
+                id="fullname" name="fullname" label="Name" required
               />
 
               <FloatingInput
