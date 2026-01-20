@@ -13,7 +13,7 @@ const Home = () => {
 
 
   return (
-    <section id='home' className='min-h-screen flex items-center'>
+    <section id='home' className='min-h-screen flex items-center py-16 md:py-24'>
       <div className='w-full max-w-6xl mx-auto px-6'>
         <div className='flex flex-col lg:flex-row items-center gap-12'>
 
