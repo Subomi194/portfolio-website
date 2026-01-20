@@ -40,7 +40,7 @@ const Contact = () => {
       setMessage("error");
     }
   }
-  
+
   useEffect(() => {
       if (message === "success" || message === "error") {
         const timer = setTimeout(() => {
@@ -51,9 +51,10 @@ const Contact = () => {
 
       }
     }, [message])
+
   return (
-    <section id='contact' className='py-24'>
-        <div className='flex-1 max-w-6xl mx-auto px-6 space-y-4'>
+    <section id='contact' className='scroll-mt-24'>
+        <div className='flex-1 text-center items-center lg:text-left max-w-6xl mx-auto py-24 px-6 space-y-4'>
           <h1>Contact</h1>
 
             <form action="" onSubmit={handleSubmit}  className='flex flex-col gap-5'>

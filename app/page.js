@@ -13,6 +13,9 @@ export default function Page() {
       <Skills/>
       <Projects/>
       <Contact/>
+     
+      
+      
 
     </div>
   );

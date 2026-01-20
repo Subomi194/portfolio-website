@@ -11,12 +11,6 @@
   --font-sans: var(--font-geist-sans);
 }
 
-/** @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} **/
 
 body {
   background: var(--background);
@@ -33,7 +27,7 @@ body {
   }
 
   .home-text {
-    @apply text-lg max-w-md lg:max-w-none;
+    @apply text-lg ;
   }
 
   

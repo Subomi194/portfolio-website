@@ -23,8 +23,8 @@ const Skills = () => {
         {name:"VS Code", icon:VscVscode},
     ]
   return (
-    <section id='skills' className='flex py-24 scroll-mt-24'>
-        <div className='flex-1 max-w-6xl mx-auto px-6 space-y-8 '>
+    <section id='skills' className='scroll-mt-24'>
+        <div className='flex-1 text-center items-center lg:text-left max-w-6xl mx-auto px-6 py-24 space-y-8 '>
             <h1>My Skills and Tools</h1>
 
             <ul className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 space-y-6'>
