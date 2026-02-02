@@ -26,7 +26,7 @@ const Home = () => {
           {/*IMAGE*/}
 
           <div className='flex flex-1 order-2 justify-center'>
-            <img src="/me.png" alt="Subomi" className='w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-2xl object-cover shadow-xl' />
+            <img src="/me2.png" alt="Subomi" className='w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-2xl object-cover shadow-xl' />
           </div>
 
           {/* Desktop */}
@@ -39,8 +39,8 @@ const Home = () => {
               </h1>
           
               
-                <p className='home-text'>A frontend Developer </p>
-                <p className='home-text wrap-break-words'>I enjoy exploring new things and creatingchk vhvhjbknhhvbftds zdfghjnbvcd fgyhujnbv cfgyuhjknm bvfgyuhij klmnhgvftyu ijklmnbvg hyuihjkbvc fgftyuhjbgfrtyg</p>
+                <p className='home-text'>Junior Software Developer focused on building clean, usable web experiences. </p>
+                <p className='home-text wrap-break-words'></p>
               
 
               <ul className='flex justify-center lg:justify-start space-x-4'>

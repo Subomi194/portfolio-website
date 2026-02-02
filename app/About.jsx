@@ -8,14 +8,16 @@ const About = () => {
 
           <div className='space-y-4'>
               
-              <p className=''>I'm a web developer who enjoys building responsive websites that feel calm and intentional.</p>
+              <p className=''>I’m a junior software developer with a frontend focus, building projects using React, TypeScript, and CSS. I enjoy creating interfaces that feel simple, intentional, and easy to use.</p>
 
-              <p className=''>Currently, I'm learning NextJs and improving on my React knowledge.</p>
+              <p className=''>I approach development with curiosity and structure, breaking problems down, asking questions, and learning through feedback and iteration. I’m comfortable working independently on tasks, while also collaborating with others to refine ideas and improve solutions.</p>
 
-              <p className=''>When I'm not coding, you can find me reading books or experimenting in the kitchen.</p>
+              <p className=''>Outside of coding, I enjoy reading fiction and experimenting in the kitchen, both of which have taught me patience, creativity, and attention to detail.
+
+I’m currently looking for junior software developer roles where I can contribute to a team, keep learning, and grow.</p>
           </div>
 
-          <a href="">View my CV</a>
+          <a href="file:///Users/olasubomiariyo/Downloads/Subomi1%20CV.pdf">View my CV</a>
 
         </div>
     </section>
