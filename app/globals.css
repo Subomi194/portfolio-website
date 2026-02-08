@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff1f2;
-  --foreground: #171717;
+  --background: #2b1a19;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --animate-drift: drift 26s ease-in-out infinite alternate;
+  
+
 }
 
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
   overflow-x: hidden;
   
 }
@@ -23,7 +25,7 @@ body {
 
 @layer base {
   h1 {
-    @apply text-3xl font-semibold text-rose-900 ;
+    @apply lg:text-4xl text-2xl font-semibold tracking-tight;
   }
 
   .home-text {
@@ -35,9 +37,65 @@ body {
 
 @layer components {
   .navlinks {
-    @apply text-xs md:text-xl font-semibold text-rose-900 hover:text-rose-500 hover:underline underline-offset-4 decoration-rose-500 hover:text-shadow-sm;
+    @apply relative text-xs md:text-lg transition-colors duration-300;
+  }
+
+  .navlinks::after {
+    content: "";
+    @apply absolute left-1/2 -bottom-2 h-1 w-full bg-[#b56b73] -translate-x-1/2 scale-x-0 origin-center transition-transform duration-300 ease-out;
+  
+  }
+
+  .navlinks:hover::after {
+    @apply scale-x-100;
   }
 
 }
+
+@layer utilities {
+  .rose-gradient {
+    --rose-gradient: linear-gradient(150deg,#b56b73,#d4a3a8,#b56b73);
+    background: var(--rose-gradient);
+  }
+
+  .rose-gradient-border {
+    background:
+      linear-gradient(#2b1a19, #2b1a19) padding-box,
+      var(--rose-gradient) border-box;
+    border-bottom: 3px solid transparent;
+  }
+
+  .rose-gradient-icon {
+    --rose-gradient: linear-gradient(150deg,#b56b73,#d4a3a8,#b56b73);
+
+    background-color: var(--rose-gradient);
+    mask-image: currentColor;
+    -webkit-mask-image: currentColor;
+    color: black;
+ 
+    
+    
+    
+  
+  }
+}
+
+
+@keyframes drift {
+  0% {
+    transform: translate(0vw, 0vh) rotate(-10deg);
+  }
+  30% {
+    transform: translate(0vw, 0vh) rotate(-25deg);
+  }
+  60% {
+    transform: translate(-20vw, -60vh) rotate(-210deg);
+  }
+  100% {
+    transform: translate(-70vw, 80vh) rotate(3deg);
+  }
+}
+
+
 
 

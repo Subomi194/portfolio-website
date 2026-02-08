@@ -16,16 +16,19 @@ const Skills = () => {
         {name:"Javascript", icon:IoLogoJavascript},
         {name:"React", icon:FaReact},
         {name:"Next.js", icon:RiNextjsLine},
-        {name:"Python", icon:FaPython},
+        //{name:"Python", icon:FaPython},
         {name:"Tailwind CSS", icon:RiTailwindCssFill},
         {name:"Git", icon: FaGitAlt},
         {name:"Github ", icon: FaGithub},
         {name:"VS Code", icon:VscVscode},
     ]
   return (
-    <section id='skills' className='scroll-mt-24'>
-        <div className='flex-1 text-center items-center lg:text-left max-w-6xl mx-auto px-6 py-24 space-y-8 '>
-            <h1>My Skills and Tools</h1>
+    <section id='skills' className='-scroll-mt-4 pt-16'>
+        <div className='flex-1 text-center items-center lg:text-left max-w-6xl mx-auto px-6 py-24 space-y-24 '>
+            <h1 className='lg:text-left text-center relative '>Skills & Tools
+
+            <span className=" absolute -bottom-2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 h-1 w-12 bg-[#b56b73]"/>
+            </h1>
 
             <ul className='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 space-y-6'>
                 {skills.map((skill) => (
@@ -33,8 +36,18 @@ const Skills = () => {
                     key={skill.name}
                     className="flex flex-col items-center gap-2 "
                   >
-                    <skill.icon className="text-rose-400 text-7xl" />
-                    <span className=" font-semibold text-gray-500">
+                    <svg width="0" height="0">
+                    <defs>
+                      <linearGradient id="roseGradient" gradientTransform="rotate(150)">
+                        <stop offset="0%" stopColor="#b56b73" />
+                        <stop offset="50%" stopColor="#d4a3a8" />
+                        <stop offset="100%" stopColor="#b56b73" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                    <skill.icon size={72} style={{ fill: "url(#roseGradient)" }} />
+                   
+                    <span className=" font-semibold">
                       {skill.name}
                     </span>
                   </li>
