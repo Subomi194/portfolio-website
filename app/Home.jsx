@@ -80,7 +80,7 @@ const Home = () => {
     </ul>
 
     <div className='focus:bg-[#2b1a19] focus:text-black transition hover:translate-1 disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed mt-2'>
-      <a href="Subomi1_CV.pdf" className='rose-gradient rounded-lg text-center  py-4 px-6' target="_blank">View my CV</a>
+      <a href="Subomi1CV.pdf" className='rose-gradient rounded-lg text-center  py-4 px-6' target="_blank">View my CV</a>
   </div>
   </div>
 </div>
