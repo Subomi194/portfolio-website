@@ -22,7 +22,7 @@ const allura = Allura({
 });
 
 export const metadata = {
-  title: "My Potfolio",
+  title: "Olasubomi Ariyo",
   description: "Created by Subomi",
 };
 

@@ -14,12 +14,15 @@ const About = () => {
             </div>
 
             <div className='flex-1 text-center lg:text-left space-y-4'>
-              <p className=''>I’m a junior software developer with a frontend focus, building projects using React, TypeScript, and CSS. I enjoy creating interfaces that feel simple, intentional, and easy to use.</p>
+              <p className=''>I’m a frontend developer with experience building user-friendly web applications using React and JavaScript. I enjoy turning ideas and designs into clean, functional interfaces and improving features until they feel simple and easy to use.</p>
 
-              <p className=''>I approach development with curiosity and structure, breaking problems down, asking questions, and learning through feedback and iteration. I’m comfortable working independently on tasks, while also collaborating with others to refine ideas and improve solutions.</p>
+              <p className=''>
+                I like taking ideas or designs and turning them into working features by refining layouts, fixing edge cases, and improving small details that make the overall experience smoother. Working on production code has helped me become more structured in how I approach problems and more thoughtful about maintainability.
+              </p>
 
-              <p className=''>Outside of coding, I enjoy reading fiction and experimenting in the kitchen, both of which have taught me patience, creativity, and attention to detail.
-                              I’m currently looking for junior software developer roles where I can contribute to a team, keep learning, and grow.</p>
+              <p className=''>Outside of coding, I enjoy reading fiction and experimenting in the kitchen both of which have taught me patience, creativity, and the importance of getting the small things right.</p>
+
+              <p>I’m currently looking for frontend developer roles where I can contribute, keep learning, and grow within a supportive team.</p>
             </div>
           </div>
           
